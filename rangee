@@ -1,0 +1,8 @@
+#!/bin/bash
+read -p "masukan list : " list;
+for ip in $(cat $list);
+do
+ipnya=$(seq -f "$ip.%g" 1 255)
+echo "$ipnya"
+echo "$ipnya" >> result.txt 
+done
