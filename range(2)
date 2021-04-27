@@ -1,0 +1,6 @@
+#!/bin/bash
+
+read -p "input ip : " ip
+ipnya=$(seq -f "$ip.%g" 1 255)
+echo "$ipnya"
+echo "$ipnya" >> ips.txt 
